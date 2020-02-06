@@ -1,0 +1,47 @@
+@use 'variables';
+@use 'mixins';
+@use 'sidebar';
+@use 'content';
+@use 'media-queries';
+
+body {
+	font-family: variables.$main-font-family;
+}
+
+footer {
+	background-color: variables.$main-color;
+}
+
+p {
+	font-family: variables.$main-font-family;
+	font-size: variables.$normal-font-size;
+	line-height: 1.5em;
+}
+
+a {
+	@include mixins.same-a;
+
+	&:hover,
+	&:focus {
+		@include mixins.same-a;
+	}
+}
+
+a {
+	&[aria-expanded="true"] {
+		color: #ffffff;
+		background: variables.$main-color;
+	}
+
+	&[data-toggle="collapse"] {
+		position: relative;
+	}
+}
+
+.dropdown-toggle::after {
+	@include mixins.transform(translateY(-50%));
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 20px;
+}

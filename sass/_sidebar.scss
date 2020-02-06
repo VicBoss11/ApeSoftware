@@ -1,0 +1,88 @@
+@use 'variables';
+@use 'mixins';
+
+#sidebar {
+	@include mixins.max-min-width(100px);
+	@include mixins.transition(all 0.3s);
+	background: variables.$secondary-color;
+	color: variables.$secondary-alt-color;
+	height: 100vh;
+	left: 0;
+	position: fixed;
+	top: 0;
+
+	.sidebar-header {
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: variables.$main-color;
+
+		div {
+			display: none;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.sidebar-menu {
+		padding: 20px 0;
+
+		div {
+			a {
+				display: block;
+				padding: 10px;
+				text-align: center;
+
+				i {
+					margin-right: 0;
+					display: block;
+					font-size: variables.$big-font-size;
+					margin-bottom: 5px;
+				}
+
+				span {
+					margin-bottom: 5px;
+					font-size: 50%;
+				}
+
+				&:hover {
+					color: #ffffff;
+					background: variables.$main-color;
+				}
+			}
+		}
+
+		&.active > a {
+			color: #7386d5;
+			background: #ffffff;
+		}
+	}
+
+	.custom-menu {
+		display: inline-block;
+		position: absolute;
+		top: 20px;
+		right: 0;
+		margin-right: -40px;
+
+		button {
+			border: 1px solid black;
+			border-radius: 0 50% 50% 0;
+			background-color: red;
+		}
+	}
+
+	.dropdown-toggle::after {
+		@include mixins.transform(translateX(50%));
+		top: auto;
+		bottom: 10px;
+		right: 50%;
+	}
+
+	&.active {
+		@include mixins.extended-sidebar;
+	}
+}

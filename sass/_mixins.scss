@@ -1,0 +1,59 @@
+@use 'variables';
+
+// ******** Mixins
+// CSS Transorm
+@mixin transform($property) {
+	-webkit-transform: $property;
+	-moz-transform: $property;
+	-ms-transform: $property;
+	-o-transform: $property;
+	transform: $property;
+}
+// CSS Transition
+@mixin transition($property) {
+	-webkit-transition: $property;
+	-moz-transition: $property;
+	-ms-transition: $property;
+	-o-transition: $property;
+	transition: $property;
+}
+// max-width = min-width
+@mixin max-min-width($size) {
+	max-width: $size;
+	min-width: $size;
+}
+// Extended sidebar SCSS
+@mixin extended-sidebar {
+	@include max-min-width(250px);
+
+	.sidebar-header {
+		div {
+			display: block;
+			margin: 0;
+			padding: 0;
+			font-family: variables.$ape-software-font-family;
+			color: #000000;
+			font-weight: bold;
+
+			h3:last-child {
+				padding-left: 10px;
+			}
+		}
+
+		img {
+			width: 80%;
+		}
+	}
+
+	.sidebar-menu {
+		div a i {
+			margin-right: 10px;
+		}
+	}
+}
+// Elemento "a" con las mismas propiedades
+@mixin same-a {
+	color: inherit;
+	text-decoration: none;
+	@include transition(all 0.3s);
+}

@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    $("#sidebar").mCustomScrollbar({
-        theme: "minimal"
-    });
+    // $("#side-menu").mCustomScrollbar({
+    //     theme: "minimal"
+    // });
 
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar, #content').toggleClass('active');

@@ -1,0 +1,28 @@
+@use 'mixins';
+
+@media (max-width: 768px) {
+	#sidebar {
+		@include mixins.extended-sidebar;
+		text-align: center;
+		margin-left: -250px;
+
+		&.active {
+			margin-left: 0;
+		}
+	}
+
+	#content {
+		width: 100%;
+
+		&.active {
+			width: calc(100% - 250px);
+		}
+	}
+
+	.dropdown-toggle::after {
+		@include mixins.transform(translateX(50%));
+		top: auto;
+		bottom: 10px;
+		right: 50%;
+	}
+}

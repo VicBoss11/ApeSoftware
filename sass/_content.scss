@@ -1,0 +1,15 @@
+@use 'mixins';
+
+#content {
+  @include mixins.transition(all 0.3s);
+  min-height: 100vh;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: calc(100% - 250px);
+
+  &.active {
+    width: calc(100% - 105px);
+  }
+}
