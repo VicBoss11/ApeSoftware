@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // $("#side-menu").mCustomScrollbar({
+    // $(".sidebar-menu").mCustomScrollbar({
     //     theme: "minimal"
     // });
 
