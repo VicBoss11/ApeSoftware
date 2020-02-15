@@ -1,116 +1,126 @@
 @use 'variables';
 @use 'mixins';
 
-#sidebar {
+.sidebar {
 	@include mixins.max-min-width(100px);
-	@include mixins.transition(all 0.3s);
-	background: variables.$secondary-color;
-	color: variables.$secondary-alt-color;
+	// @include mixins.transition(all 0.3s);
+	background-color: variables.$secondary-color;
+	color: variables.$alt-color;
 	height: 100vh;
 	left: 0;
 	position: fixed;
 	top: 0;
 	z-index: 10;
 
-	.sidebar-header {
-		background: variables.$main-color;
-		padding: 10px;
-		padding-right: 15px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-
-		div {
-			display: none;
-		}
-
-		img {
-			width: 100%;
-		}
-	}
-
-	.sidebar-menu {
-		@include mixins.custom-scrollbar(3px, 3px, variables.$main-color, variables.$secondary-alt-color);
-		height: 100%;
-		overflow: auto;
-
-		div {
-			margin-top: 10px;
-			a {
-				display: block;
-				padding: 10px;
-				text-align: center;
-
-				i {
-					display: block;
-					font-size: variables.$sidebar-icon-size;
-				}
-
-				span {
-					font-size: variables.$small-font-size + 0.15em;
-					font-weight: bold;
-				}
-
-				&:hover {
-					color: #ffffff;
-					background: variables.$main-color;
-				}
-			}
-
-			&>div {
-				background-color: variables.$main-color;
-				color: variables.$secondary-alt-color;
-				font-size: variables.$small-font-size;
-				margin: 0;
-
-				a:first-child{
-					border-bottom: 1px solid transparentize(variables.$secondary-alt-color, 0.95);
-				}
-
-				a:last-child{
-					border-top: 1px solid variables.$secondary-alt-color;
-				}
-			}
-		}
-
-		&.active > a {
-			color: #7386d5;
-			background: #ffffff;
-		}
-	}
-
-	.custom-menu {
-		display: inline-block;
-		position: absolute;
-		top: 20px;
-		right: 0;
-		margin-right: -20px;
-		z-index: 100;
-
-		button {
-			background-color: variables.$secondary-alt-color;
-			border: 1.75px solid variables.$main-color;
-			color: variables.$main-color;
-
-			&:hover {
-				background-color: variables.$secondary-color;
-				color: variables.$secondary-alt-color;
-			}
-
-			&:focus {
-				@include mixins.no-focus-button;
-			}
-		}
-	}
-
-	.dropdown-toggle::after {
-		@include mixins.transform(translateX(50%));
-		top: auto;
-		bottom: 5px;
-		right: 50%;
-	}
-
 	&.active {
 		@include mixins.extended-sidebar;
+	}
+}
+
+.sidebar-header {
+	//@include mixins.gradient-bg-color(#34e89e, #0f3443);
+	align-content: center;
+	background-color: variables.$main-color;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	padding-right: 15px;
+
+	img {
+		width: 95%;
+	}
+
+	.corporation-logo {
+		display: none;
+	}
+}
+
+.sidebar-menu {
+	@include mixins.custom-scrollbar(3px, 3px, variables.$main-color, variables.$secondary-alt-color);
+	height: 100%;
+	overflow: auto;
+	padding-top: 15px;
+}
+
+.menu-item {
+	a {
+		display: block;
+		height: 75px;
+		padding: 12.5px;
+		text-align: center;
+
+		&:hover {
+			background-color: variables.$alt-color;
+			color: variables.$main-color;
+		}
+
+		&[aria-expanded="true"] {
+			background: variables.$main-color;
+			color: variables.$secondary-alt-color;
+
+			&:hover {
+				background-color: variables.$secondary-alt-color;
+				color: variables.$main-color;
+			}
+		}
+
+		&[data-toggle="collapse"] {
+			position: relative;
+		}
+
+		i {
+			display: block;
+			font-size: variables.$sidebar-icon-size;
+		}
+
+		span {
+			font-size: variables.$small-font-size + 0.15em;
+			font-weight: 600;
+		}
+
+		.dropdown {
+			bottom: 5px;
+			font-size: variables.$normal-font-size - 0.2;
+			top: auto;
+		}
+	}
+
+	div {
+		background-color: variables.$main-color;
+		margin: 0;
+
+		.sub-menu-item {
+			align-items: center;
+			display: flex;
+			flex-flow: row wrap;
+			font-size: variables.$small-font-size + 0.375em;
+			height: 40px;
+			justify-content: center;
+			padding: 0;
+		}
+	}
+}
+
+.sidebar-toggle-button {
+	display: inline-block;
+	position: absolute;
+	top: 20px;
+	right: 0;
+	margin-right: -20px;
+	z-index: 100;
+
+	button {
+		background-color: variables.$secondary-alt-color;
+		border: 2px solid variables.$main-color;
+		color: variables.$secondary-color;
+
+		&:hover {
+			background-color: variables.$tertiary-alt-color;
+			color: #9ad7d2;
+		}
+
+		&:focus {
+			@include mixins.no-focus-button;
+		}
 	}
 }

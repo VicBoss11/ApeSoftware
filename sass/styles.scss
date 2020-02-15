@@ -2,15 +2,23 @@
 @use 'mixins';
 @use 'sidebar';
 @use 'content';
+@use 'footer';
 @use 'media-queries';
+
+html {
+	@include mixins.custom-scrollbar(8px, 8px, #a59f9f, variables.$secondary-color);
+}
 
 body {
 	font-family: variables.$main-font-family;
+	word-wrap: break-word;
+	word-break: keep-all;
 }
 
-footer {
-	background-color: variables.$main-color;
-}
+// header {
+// 	@include mixins.background-img(cover, center, fixed, 100vh, "software-min");
+// 	height: 100vh;
+// }
 
 p {
 	font-family: variables.$main-font-family;
@@ -19,29 +27,33 @@ p {
 }
 
 a {
-	@include mixins.same-a;
+	@include mixins.no-decoration;
 
 	&:hover,
 	&:focus {
-		@include mixins.same-a;
+		@include mixins.no-decoration;
 	}
 }
 
-a {
-	&[aria-expanded="true"] {
-		color: #ffffff;
-		background: variables.$main-color;
-	}
-
-	&[data-toggle="collapse"] {
-		position: relative;
-	}
+.fa-facebook-square,
+.fa-twitter,
+.fa-linkedin,
+.fa-github {
+	@include mixins.transition(color 0.25s);
 }
 
-.dropdown-toggle::after {
-	@include mixins.transform(translateY(-50%));
-	display: block;
-	position: absolute;
-	top: 50%;
-	right: 20px;
+.fa-facebook-square:hover {
+	color: #3b5998;
+}
+
+.fa-twitter:hover {
+	color: #55acee;
+}
+
+.fa-linkedin:hover {
+	color: #e95950;
+}
+
+.fa-github:hover {
+	color: #cb2027;
 }

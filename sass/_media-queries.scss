@@ -2,38 +2,40 @@
 @use 'mixins';
 
 @media (max-width: 768px) {
-	#sidebar {
+	// Sidebar
+	.sidebar {
 		@include mixins.extended-sidebar;
 		text-align: center;
 		margin-left: -250px;
-
-		.custom-menu {
-			display: block;
-			position: absolute;
-			top: 20px;
-			right: 0;
-			margin-right: -45px;
-			width: 45px;
-			button {
-				cursor: pointer;
-				display: block;
-				border: 1px solid variables.$main-color;
-				border-radius: 0 45px 45px 0;
-				background-color: variables.$secondary-color;
-				width: 100%;
-
-				i {
-					color: variables.$secondary-alt-color;
-				}
-			}
-		}
-
 		&.active {
 			margin-left: 0;
 		}
 	}
 
-	#content {
+	.sidebar-toggle-button {
+		display: block;
+		position: absolute;
+		top: 20px;
+		right: 0;
+		margin-right: -45px;
+		width: 45px;
+		
+		button {
+			cursor: pointer;
+			display: block;
+			border: 1px solid variables.$main-color;
+			border-radius: 0 45px 45px 0;
+			background-color: variables.$secondary-color;
+			width: 100%;
+
+			i {
+				color: variables.$secondary-alt-color;
+			}
+		}
+	}
+
+	// Content
+	.content {
 		width: 100%;
 
 		&.active {

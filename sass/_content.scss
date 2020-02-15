@@ -1,15 +1,27 @@
+@use 'variables';
 @use 'mixins';
 
-#content {
-  @include mixins.transition(all 0.3s);
-  min-height: 100vh;
-  padding: 10px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: calc(100% - 250px);
-  z-index: 1;
-  &.active {
-    width: calc(100% - 105px);
-  }
+.content {
+	// @include mixins.transition(all 0.3s);
+	position: absolute;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	right: 0;
+	top: 0;
+	width: calc(100% - 100px);
+	z-index: 1;
+
+	&.active {
+		width: calc(100% - 250px);
+	}
+
+	.main-content {
+		min-height: 100%;
+		position: relative;
+
+		& > section {
+			padding-bottom: 360px;
+		}
+	}
 }
