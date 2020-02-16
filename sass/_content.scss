@@ -14,13 +14,16 @@
 
 	&.active {
 		width: calc(100% - 250px);
+		.bg-section-img {
+			background-position: 250px 0;
+		}
 	}
 
 	.main-content {
 		min-height: 100%;
 		position: relative;
 
-		& > section {
+		& > main {
 			padding-bottom: 360px;
 		}
 	}

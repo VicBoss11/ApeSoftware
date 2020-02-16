@@ -1,0 +1,39 @@
+@use "variables";
+@use 'mixins';
+
+.bg-header {
+	@include mixins.background-img(cover, center, scroll, 100vh, 0.5, "header/gorilla-and-human-hands");
+	height: 100vh;
+}
+
+.company-name,
+.slogan {
+	background-color: #ffffff;
+	color: #000000;
+	font-weight: bold;
+	mix-blend-mode: screen;
+	padding: 10px 25px;
+	position: absolute;
+}
+
+.company-name {
+	font-family: variables.$ape-software-font-family;
+	font-size: 40px;
+	height: 100px;
+	right: 20px;
+	text-align: center;
+	top: 20px;
+	width: 365px;
+}
+
+.slogan {
+	font-size: 35px;
+	right: 103.25px;
+	top: 100px;
+	width: fit-content;
+
+	span {
+		display: block;
+		margin-left: 35px;
+	}
+}

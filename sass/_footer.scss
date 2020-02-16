@@ -9,3 +9,26 @@ footer {
 	bottom: 0;
 	border-bottom: 1px solid;
 }
+
+.fa-facebook-square,
+.fa-twitter,
+.fa-linkedin,
+.fa-github {
+	@include mixins.transition(color 0.25s);
+}
+
+.fa-facebook-square:hover {
+	color: #3b5998;
+}
+
+.fa-twitter:hover {
+	color: #55acee;
+}
+
+.fa-linkedin:hover {
+	color: #e95950;
+}
+
+.fa-github:hover {
+	color: #cb2027;
+}

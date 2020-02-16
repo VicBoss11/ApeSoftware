@@ -1,0 +1,68 @@
+@use "variables";
+@use 'mixins';
+
+.section-name,
+.path {
+	color: #ffffff;
+}
+
+.section-name {
+	font-size: variables.$title-font-size;
+	font-weight: bold;
+}
+
+.path {
+	font-size: variables.$small-font-size + 0.25;
+	margin-left: 2.5px;
+	margin-bottom: -10px;
+}
+
+.bg-section-img {
+	div {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: flex-end;
+		margin-left: 50px;
+
+		.section-name {
+			margin-bottom: 25px;
+		}
+	}
+}
+
+.product-section {
+	@include mixins.background-img(cover, 100px 0, fixed, 40vh, 0.5, "section/product");
+}
+
+.service-section {
+	@include mixins.background-img(cover, 100px 0, fixed, 40vh, 0.5, "section/service");
+}
+
+.business-model-section {
+	@include mixins.background-img(cover, 100px 0, fixed, 40vh, 0.15, "section/business-model");
+}
+
+.corporate-culture-section {
+	@include mixins.background-img(cover, 100px 0, fixed, 40vh, 0.5, "section/corporate-culture");
+}
+
+.corporate-governance-section {
+	@include mixins.background-img(cover, 100px 0, fixed, 40vh, 0.5, "section/corporate-governance");
+}
+
+.interest-data-section {
+	@include mixins.background-img(cover, 100px 0, fixed, 40vh, 0.5, "section/interest-data");
+}
+
+.accessibility-section {
+	@include mixins.background-img(cover, 70px -290px, fixed, 40vh, 0.25, "section/accessibility");
+}
+
+.contact-section {
+	@include mixins.background-img(cover, 100px 0, fixed, 40vh, 0.5, "section/contact");
+}
+
+.container{
+	min-height: 60vh;
+}

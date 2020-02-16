@@ -2,11 +2,15 @@
 @use 'mixins';
 @use 'sidebar';
 @use 'content';
+@use 'header';
+@use 'main';
 @use 'footer';
+@use 'side-items';
 @use 'media-queries';
 
 html {
 	@include mixins.custom-scrollbar(8px, 8px, #a59f9f, variables.$secondary-color);
+	scroll-behavior: smooth;
 }
 
 body {
@@ -15,92 +19,8 @@ body {
 	word-break: keep-all;
 }
 
-.bg-image {
-	@include mixins.background-img(cover, center, scroll, 100vh, "gorilla-and-human-hands");
+article {
 	height: 100vh;
-
-	.company-name,
-	.slogan {
-		background-color: #ffffff;
-		color: #000000;
-		font-weight: bold;
-		mix-blend-mode: screen;
-		padding: 10px 25px;
-		position: absolute;
-	}
-
-	.company-name {
-		font-family: variables.$ape-software-font-family;
-		font-size: 40px;
-		height: 100px;
-		right: 20px;
-		text-align: center;
-		top: 20px;
-		width: 365px;
-	}
-
-	.slogan {
-		font-size: 35px;
-		right: 103.25px;
-		top: 100px;
-		width: fit-content;
-
-		span {
-			display: block;
-			margin-left: 35px;
-		}
-	}
-}
-.side-items {
-	a {
-		@include mixins.transition(0.3s);
-		align-items: center;
-		border-radius: 5px 0 0 5px;
-		cursor: pointer;
-		display: flex;
-		font-size: 15px;
-		height: 40px;
-		padding: 15px 0;
-		position: fixed;
-		right: -130px;
-		width: 170px;
-		z-index: 200;
-
-		&,
-		&:hover,
-		i,
-		span {
-			color: #ffffff;
-		}
-
-		&:hover {
-			right: 0;
-		}
-
-		i {
-			text-align: center;
-			width: 40px;
-		}
-
-		span {
-			padding-left: 5px;
-			width: 130px;
-		}
-	}
-}
-
-.accessibility {
-	background-color: #555555;
-	bottom: 30px;
-	
-	i {
-		@include mixins.transition(transform 0.8s ease-in-out);
-	}
-	&:hover {
-		i {
-			@include mixins.transform(rotate(360deg));
-		}
-	}
 }
 
 p {
@@ -116,27 +36,4 @@ a {
 	&:focus {
 		@include mixins.no-decoration;
 	}
-}
-
-.fa-facebook-square,
-.fa-twitter,
-.fa-linkedin,
-.fa-github {
-	@include mixins.transition(color 0.25s);
-}
-
-.fa-facebook-square:hover {
-	color: #3b5998;
-}
-
-.fa-twitter:hover {
-	color: #55acee;
-}
-
-.fa-linkedin:hover {
-	color: #e95950;
-}
-
-.fa-github:hover {
-	color: #cb2027;
 }

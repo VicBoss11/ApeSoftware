@@ -52,16 +52,16 @@
 	}
 }
 
-@mixin background-img($size, $position, $attachment, $height, $img-name, $img-extension: "jpg") {
-	$url: "../img/header/#{$img-name}.#{$img-extension}";
+@mixin background-img($size, $position, $attachment, $height, $opacity, $img-path, $img-extension: "jpg") {
+	$url: "../img/#{$img-path}.#{$img-extension}";
 	background-size: $size;
 	background-position: $position;
 	background-attachment: $attachment;
 	height: $height;
-	background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url($url);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
+	background-image: -o-linear-gradient(rgba(0, 0, 0, $opacity), rgba(0, 0, 0, $opacity)), url($url);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, $opacity)), to(rgba(0, 0, 0, $opacity))),
 		url($url);
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url($url);
+	background-image: linear-gradient(rgba(0, 0, 0, $opacity), rgba(0, 0, 0, $opacity)), url($url);
 }
 
 // Extended sidebar SCSS
