@@ -1,7 +1,29 @@
 $(document).ready(function () {
     // $(".sidebar-menu").mCustomScrollbar({
     //     theme: "minimal"
-    // });
+    // }); //
+    //"La imaginación <span>en funcionamiento"</span>
+
+    var slogan1 = "\"La imaginación";
+    var slogan2 = "en funcionamiento\"";
+    var i = 0;
+    var j = 0;
+
+    typeWriter();
+
+    function typeWriter() {
+        if (i == slogan1.length && j == 0) {
+            $('.slogan').append('<span>');
+        }
+
+        if (i < slogan1.length) {
+            $('.slogan').append(slogan1[i++]);
+            setTimeout(typeWriter, 65);
+        } else if (j < slogan2.length) {
+            $('.slogan span').append(slogan2[j++]);
+            setTimeout(typeWriter, 65);
+        }
+    }
 
     $('#sidebarCollapse').on('click', function () {
         $('.sidebar, .content').toggleClass('active');

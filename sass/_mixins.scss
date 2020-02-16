@@ -23,11 +23,47 @@
 	min-width: $size;
 }
 
-@mixin gradient-bg-color($color, $color2) {
-	background: $color;
-	background: -webkit-linear-gradient(to right, $color2, $color);
-	background: linear-gradient(to right, $color2, $color);
+// Elemento sin decoración
+@mixin no-decoration {
+	@include transition(all 0.3s);
+	color: inherit;
+	text-decoration: none;
 }
+
+@mixin no-focus-button {
+	outline: none;
+	outline-offset: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+@mixin custom-scrollbar($width, $height, $color1, $color2) {
+	&::-webkit-scrollbar {
+		width: $width;
+		height: $height;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: $color1;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $color2;
+	}
+}
+
+@mixin background-img($size, $position, $attachment, $height, $img-name, $img-extension: "jpg") {
+	$url: "../img/header/#{$img-name}.#{$img-extension}";
+	background-size: $size;
+	background-position: $position;
+	background-attachment: $attachment;
+	height: $height;
+	background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url($url);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
+		url($url);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url($url);
+}
+
 // Extended sidebar SCSS
 @mixin extended-sidebar {
 	@include max-min-width(250px);
@@ -113,44 +149,4 @@
 			}
 		}
 	}
-}
-// Elemento sin decoración
-@mixin no-decoration {
-	@include transition(all 0.3s);
-	color: inherit;
-	text-decoration: none;
-}
-
-@mixin no-focus-button {
-	outline: none;
-	outline-offset: none;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-
-@mixin custom-scrollbar($width, $height, $color1, $color2) {
-	&::-webkit-scrollbar {
-		width: $width;
-		height: $height;
-	}
-
-	&::-webkit-scrollbar-track {
-		background: $color1;
-	}
-
-	&::-webkit-scrollbar-thumb {
-		background: $color2;
-	}
-}
-
-@mixin background-img($size, $position, $attachment, $height, $img-name, $img-extension: "jpg") {
-	$url: "../img/header/#{$img-name}.#{$img-extension}";
-	background-size: $size;
-	background-position: $position;
-	background-attachment: $attachment;
-	height: $height;
-	background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url($url);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
-		url($url);
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url($url);
 }

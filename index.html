@@ -99,9 +99,16 @@
 
     <div class="content">
         <div class="main-content">
+            <div class="side-items">
+                <a class="accessibility" data-toggle="modal" data-target="#accessibility-modal">
+                    <i class="fas fa-cog"></i><span>ACCESIBILIDAD</span>
+                </a>
+            </div>
             <section>
                 <header class="bg-image">
-
+                    <div class="company-name">Ape Software</div>
+                    <div class="slogan">
+                    </div>
                 </header>
                 <main>
 
@@ -137,7 +144,26 @@
             </footer>
         </div>
     </div>
-
+    <!-- Modal -->
+    <div class="modal fade" id="accessibility-modal" tabindex="-1" role="dialog" aria-labelledby="accessibilityModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="accessibilityModalLabel">Ajustes de accesibilidad</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- JavaScript Bootstrap -->
     <!-- Primero jQuery, luego Popper.js, después Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

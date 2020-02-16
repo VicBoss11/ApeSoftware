@@ -345,6 +345,99 @@ body {
   word-break: keep-all;
 }
 
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  height: 100vh;
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/header/gorilla-and-human-hands.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/header/gorilla-and-human-hands.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/header/gorilla-and-human-hands.jpg");
+  height: 100vh;
+}
+.bg-image .company-name,
+.bg-image .slogan {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  mix-blend-mode: screen;
+  padding: 10px 25px;
+  position: absolute;
+}
+.bg-image .company-name {
+  font-family: "Orbitron", sans-serif;
+  font-size: 40px;
+  height: 100px;
+  right: 20px;
+  text-align: center;
+  top: 20px;
+  width: 365px;
+}
+.bg-image .slogan {
+  font-size: 35px;
+  right: 103.25px;
+  top: 100px;
+  width: fit-content;
+}
+.bg-image .slogan span {
+  display: block;
+  margin-left: 35px;
+}
+
+.side-items a {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  align-items: center;
+  border-radius: 5px 0 0 5px;
+  cursor: pointer;
+  display: flex;
+  font-size: 15px;
+  height: 40px;
+  padding: 15px 0;
+  position: fixed;
+  right: -130px;
+  width: 170px;
+  z-index: 200;
+}
+.side-items a, .side-items a:hover,
+.side-items a i,
+.side-items a span {
+  color: #ffffff;
+}
+.side-items a:hover {
+  right: 0;
+}
+.side-items a i {
+  text-align: center;
+  width: 40px;
+}
+.side-items a span {
+  padding-left: 5px;
+  width: 130px;
+}
+
+.accessibility {
+  background-color: #555555;
+  bottom: 30px;
+}
+.accessibility i {
+  -webkit-transition: transform 0.8s ease-in-out;
+  -moz-transition: transform 0.8s ease-in-out;
+  -ms-transition: transform 0.8s ease-in-out;
+  -o-transition: transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+}
+.accessibility:hover i {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
 p {
   font-family: "Titillium Web", sans-serif;
   font-size: 1.05em;
