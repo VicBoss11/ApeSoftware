@@ -7,7 +7,7 @@
 		@include mixins.extended-sidebar;
 		text-align: center;
 		margin-left: -250px;
-		&.active {
+		&.active-sidebar {
 			margin-left: 0;
 		}
 	}
@@ -38,7 +38,7 @@
 	.content {
 		width: 100%;
 
-		&.active {
+		&.active-sidebar {
 			width: calc(100% - 250px);
 		}
 	}

@@ -6,10 +6,12 @@
 @use 'main';
 @use 'footer';
 @use 'side-items';
+@use 'accessibility-box';
 @use 'media-queries';
 
 html {
 	@include mixins.custom-scrollbar(8px, 8px, #a59f9f, variables.$secondary-color);
+	overflow-y: scroll;
 	scroll-behavior: smooth;
 }
 
@@ -36,4 +38,8 @@ a {
 	&:focus {
 		@include mixins.no-decoration;
 	}
+}
+
+button {
+	cursor: pointer;
 }

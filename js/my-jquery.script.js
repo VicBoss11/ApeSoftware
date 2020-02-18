@@ -4,6 +4,7 @@ $(document).ready(function () {
     // }); //
     //"La imaginación <span>en funcionamiento"</span>
 
+    var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
     var slogan1 = "\"La imaginación";
     var slogan2 = "en funcionamiento\"";
     var i = 0;
@@ -26,10 +27,16 @@ $(document).ready(function () {
     }
 
     $('#sidebarCollapse').on('click', function () {
-        $('.sidebar, .content').toggleClass('active');
+        $('.sidebar, .content').toggleClass('active-sidebar');
         $('.collapse.in').toggleClass('in');
         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
     });
+
+    $('#close-accessibility-box').on('click', function () {
+        $('#accessibility-box').addClass('animated fadeOutDown').one(animationEnd, function () {
+            $(this).css('display', 'none');
+        });
+    })
 });
 
 // // Para realizar operaciones en términos visuales utilizo JQuery ya que simplifica el código de JavaScript

@@ -1,0 +1,52 @@
+@use 'variables';
+@use 'mixins';
+
+.accesibility-box {
+	background-color: #ffffff;
+	bottom: 0px;
+	display: flex;
+	flex-direction: column;
+	left: 0px;
+	position: fixed;
+	width: 100%;
+	z-index: 150;
+
+	a {
+		text-decoration: underline;
+	}
+	display: none;
+}
+
+.accesibility-info {
+	display: flex;
+	margin-right: 55px;
+
+	p {
+		font-size: variables.$small-font-size + 0.35;
+		height: 100%;
+		margin: 0;
+		padding: 15px;
+		text-align: justify;
+	}
+}
+
+.accesibility-options {
+	background-color: #d9d9d9;
+	display: flex;
+	justify-content: center;
+	text-decoration: underline;
+
+	a {
+		cursor: pointer;
+		font-size: 14px;
+		margin: 3px 15px;
+	}
+}
+
+.accesibility-icon {
+	align-items: center;
+	display: flex;
+	font-size: 75px;
+	justify-content: center;
+	margin: 15px;
+}
