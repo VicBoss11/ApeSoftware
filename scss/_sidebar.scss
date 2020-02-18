@@ -5,6 +5,7 @@
 	@include mixins.max-min-width(100px);
 	// @include mixins.transition(all 0.3s);
 	background-color: variables.$secondary-color;
+	bottom: 0;
 	color: variables.$alt-color;
 	height: 100vh;
 	left: 0;
@@ -15,15 +16,9 @@
 	&.active-sidebar {
 		@include mixins.extended-sidebar;
 	}
-
-	.active {
-		background-color: variables.$alt-color;
-		color: variables.$main-color;
-	}
 }
 
 .sidebar-header {
-	//@include mixins.gradient-bg-color(#34e89e, #0f3443);
 	align-content: center;
 	background-color: variables.$main-color;
 	display: flex;
@@ -42,9 +37,17 @@
 
 .sidebar-menu {
 	@include mixins.custom-scrollbar(3px, 3px, variables.$main-color, variables.$secondary-alt-color);
-	height: 100%;
+	bottom: 0;
+	height: calc(100% - 100px);
 	overflow: auto;
 	padding-top: 15px;
+	position: absolute;
+	width: 100%;
+
+	.active {
+		background-color: variables.$alt-color;
+		color: variables.$main-color;
+	}
 }
 
 .menu-item {
