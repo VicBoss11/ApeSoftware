@@ -46,4 +46,20 @@ $(document).ready(function () {
         });
     });
 
+    $('#switch-1:checkbox').change(function () {
+        if ($(this).is(":checked")) {
+            $('.bg-section-img').addClass('no-parallax');
+        } else {
+            $('.bg-section-img').removeClass('no-parallax');
+        }
+    });
+
+    $('#switch-2:checkbox').change(function () {
+        if ($(this).is(":checked")) {
+            $('.corporate-culture p').addClass('p-big-text');
+        } else {
+            $('.corporate-culture p, .business-model p').removeClass('p-big-text');
+        }
+    }),
+    
 });

@@ -2,7 +2,6 @@
 @use 'mixins';
 
 @media (max-width: 768px) {
-	// Sidebar
 	.sidebar {
 		@include mixins.extended-sidebar;
 		text-align: center;
@@ -10,43 +9,133 @@
 		&.active-sidebar {
 			margin-left: 0;
 		}
-	}
 
-	.sidebar-toggle-button {
-		display: block;
-		position: absolute;
-		top: 20px;
-		right: 0;
-		margin-right: -45px;
-		width: 45px;
-		
-		button {
-			cursor: pointer;
-			display: block;
-			border: 1px solid variables.$main-color;
-			border-radius: 0 45px 45px 0;
-			background-color: variables.$secondary-color;
-			width: 100%;
-
-			i {
-				color: variables.$secondary-alt-color;
-			}
+		.sidebar-toggle-button {
+			margin-right: -50px;
 		}
 	}
 
-	// Content
+	.product-section,
+	.service-section,
+	.business-model-section,
+	.corporate-culture-section,
+	.corporate-governance-section,
+	.interest-data-section,
+	.contact-section {
+		background-position: 0px -50px;
+	}
+
 	.content {
 		width: 100%;
-
-		&.active-sidebar {
-			width: calc(100% - 250px);
+		.container {
+			width: 80%;
+		}
+		.corporate-governance {
+			height: 1600px;
 		}
 	}
 
-	.dropdown-toggle::after {
-		@include mixins.transform(translateX(50%));
-		top: auto;
-		bottom: 10px;
-		right: 50%;
+	.accesibility-box{
+		background-color: #ececec;
+	}
+}
+
+@media (max-width: 992px) {
+	.h-product-card {
+		box-shadow: 0 4px 8px 0 #00000033;
+		display: flex;
+		flex-direction: column;
+		height: auto;
+		margin: auto;
+		max-width: 300px;
+		margin-bottom: 25px;
+
+		h3 {
+			text-align: center;
+			color: variables.$tertiary-alt-color;
+		}
+
+		button {
+			@include mixins.transition(all 0.5s);
+			background-color: variables.$tertiary-alt-color;
+			border: none;
+			color: #ffffff;
+			font-size: 18px;
+			height: 50px;
+			outline: 0;
+			padding: 0 12px;
+			text-align: center;
+			width: 100%;
+
+			&:hover {
+				opacity: 0.85;
+			}
+		}
+
+		ul {
+			list-style-type: square;
+
+			font-size: variables.$normal-font-size - 0.15em;
+		}
+
+		.img-container {
+			width: 100%;
+			min-height: 300px;
+			display: flex;
+			align-content: center;
+			img {
+				width: 100%;
+			}
+		}
+
+		.price {
+			color: variables.$alt-color;
+			font-size: 35px;
+			text-align: center;
+		}
+
+		.product-description {
+			min-height: 451.75px;
+			height: auto;
+		}
+
+		.description {
+			padding: 0 20px;
+		}
+
+		.properties {
+			padding: 0 20px;
+		}
+	}
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+	.corporate-governance {
+		height: 1550px;
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	.corporate-governance {
+		height: 1400px;
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	.corporate-governance {
+		height: 1075px;
+	}
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+	.corporate-governance {
+		height: 1050px;
 	}
 }

@@ -226,12 +226,52 @@
 .content.active-sidebar .bg-section-img {
   background-position: 250px 0;
 }
+.content.active-sidebar .container {
+  width: 90%;
+}
 .content .main-content {
   min-height: 100%;
   position: relative;
 }
 .content .main-content > main {
   padding-bottom: 360px;
+}
+.content .main-content .container {
+  min-height: 60vh;
+  margin: 75px auto;
+}
+.content .main-content .container p:first-child {
+  margin: -25px auto 25px auto;
+}
+.content .main-content .container > p {
+  text-align: justify;
+  margin: 25px auto;
+}
+.content .main-content .container ul {
+  list-style-type: square;
+}
+
+.corporate-culture ul,
+.corporate-culture ol,
+.business-model ul,
+.business-model ol {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1.05em;
+  line-height: 1.5em;
+  text-align: justify;
+}
+.corporate-culture ul li > span,
+.corporate-culture ol li > span,
+.business-model ul li > span,
+.business-model ol li > span {
+  color: #255e59;
+}
+
+.other-img {
+  width: 150px;
+}
+.other-img img {
+  width: 80%;
 }
 
 .bg-header {
@@ -257,7 +297,7 @@
 
 .company-name {
   font-family: "Orbitron", sans-serif;
-  font-size: 40px;
+  font-size: 37.5px;
   height: 100px;
   right: 20px;
   text-align: center;
@@ -307,7 +347,7 @@
   background-size: cover;
   background-position: 100px 0;
   background-attachment: fixed;
-  height: 40vh;
+  height: 250px;
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/section/product.jpg");
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/section/product.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/section/product.jpg");
@@ -317,7 +357,7 @@
   background-size: cover;
   background-position: 100px 0;
   background-attachment: fixed;
-  height: 40vh;
+  height: 250px;
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/section/service.jpg");
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/section/service.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/section/service.jpg");
@@ -327,7 +367,7 @@
   background-size: cover;
   background-position: 100px 0;
   background-attachment: fixed;
-  height: 40vh;
+  height: 250px;
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../img/section/business-model.jpg");
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15))), url("../img/section/business-model.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../img/section/business-model.jpg");
@@ -337,7 +377,7 @@
   background-size: cover;
   background-position: 100px 0;
   background-attachment: fixed;
-  height: 40vh;
+  height: 250px;
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/section/corporate-culture.jpg");
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/section/corporate-culture.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/section/corporate-culture.jpg");
@@ -347,7 +387,7 @@
   background-size: cover;
   background-position: 100px 0;
   background-attachment: fixed;
-  height: 40vh;
+  height: 250px;
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/section/corporate-governance.jpg");
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/section/corporate-governance.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/section/corporate-governance.jpg");
@@ -357,7 +397,7 @@
   background-size: cover;
   background-position: 100px 0;
   background-attachment: fixed;
-  height: 40vh;
+  height: 250px;
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/section/interest-data.jpg");
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/section/interest-data.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/section/interest-data.jpg");
@@ -367,18 +407,83 @@
   background-size: cover;
   background-position: 100px 0;
   background-attachment: fixed;
-  height: 40vh;
+  height: 250px;
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/section/contact.jpg");
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/section/contact.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/section/contact.jpg");
 }
 
-.container {
-  min-height: 60vh;
-  margin: 75px auto;
+.president-box {
+  margin: 50px 0;
 }
-.container .row {
-  margin: 30px 0;
+
+.president-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.president-info img {
+  width: 175px;
+  height: 175px;
+}
+.president-info p {
+  color: #1a1a1a;
+  font-size: 1.15em;
+  text-align: center;
+}
+.president-info .title {
+  margin: 10px 0 5px 0;
+  color: #122d2b;
+  font-size: 1.5em;
+}
+
+.president-speech {
+  border-left: 3px solid #42a79e;
+  display: flex;
+  justify-content: center;
+  height: 175px;
+}
+.president-speech .quote {
+  margin: 80px 50px;
+  display: flex;
+  align-items: center;
+}
+
+.staff-box {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+}
+.staff-box img {
+  height: 125px;
+  width: 125px;
+}
+.staff-box p {
+  color: #1a1a1a;
+  font-size: 0.85em;
+  padding: 0 2em;
+  text-align: center;
+}
+.staff-box p.title {
+  padding: 0;
+  margin: 10px;
+  color: #122d2b;
+  font-size: 1.05em;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.bg-section-img.no-parallax {
+  background-attachment: scroll;
+  background-position: 0 0;
+}
+
+.p-big-text {
+  font-size: 3em;
 }
 
 .product-card {
@@ -388,6 +493,7 @@
   height: auto;
   margin: auto;
   max-width: 300px;
+  margin-bottom: 55px;
 }
 .product-card h3 {
   text-align: center;
@@ -443,6 +549,10 @@
 
 .h-product-card {
   box-shadow: 0 4px 8px 0 #00000033;
+  display: flex;
+  flex-direction: column;
+  margin: 25px auto;
+  max-width: 1057.5px;
 }
 .h-product-card button {
   -webkit-transition: all 0.5s;
@@ -474,7 +584,7 @@
 }
 .h-product-card h3 {
   color: #255e59;
-  margin: 15px 0;
+  margin: 15px 0 35px 0;
   text-align: center;
 }
 .h-product-card .price {
@@ -482,11 +592,60 @@
   font-size: 35px;
   text-align: center;
 }
+.h-product-card .description,
+.h-product-card .properties {
+  padding: 0 25px 0 15px;
+}
 .h-product-card .properties {
   font-size: 0.975em;
 }
 .h-product-card .properties ul {
   list-style-type: square;
+}
+
+.service-card {
+  box-shadow: 0 4px 8px 0 #00000033;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: flex-end;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 55px;
+  width: 400px;
+}
+.service-card h3 {
+  text-align: center;
+  color: #255e59;
+}
+.service-card button {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: #255e59;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 10px;
+  outline: 0;
+  padding: 0 12px;
+  text-align: center;
+  width: 100%;
+}
+.service-card button:hover {
+  opacity: 0.85;
+}
+.service-card .img-container {
+  height: 70%;
+  width: 70%;
+  display: flex;
+}
+.service-card .img-container img {
+  align-self: center;
+  width: 100%;
 }
 
 footer {
@@ -588,7 +747,6 @@ footer {
   position: fixed;
   width: 100%;
   z-index: 150;
-  display: none;
 }
 .accesibility-box a {
   text-decoration: underline;
@@ -721,43 +879,114 @@ footer {
   .sidebar.active-sidebar {
     margin-left: 0;
   }
+  .sidebar .sidebar-toggle-button {
+    margin-right: -50px;
+  }
 
-  .sidebar-toggle-button {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 0;
-    margin-right: -45px;
-    width: 45px;
-  }
-  .sidebar-toggle-button button {
-    cursor: pointer;
-    display: block;
-    border: 1px solid #51bab1;
-    border-radius: 0 45px 45px 0;
-    background-color: #42a79e;
-    width: 100%;
-  }
-  .sidebar-toggle-button button i {
-    color: #173936;
+  .product-section,
+.service-section,
+.business-model-section,
+.corporate-culture-section,
+.corporate-governance-section,
+.interest-data-section,
+.contact-section {
+    background-position: 0px -50px;
   }
 
   .content {
     width: 100%;
   }
-  .content.active-sidebar {
-    width: calc(100% - 250px);
+  .content .container {
+    width: 80%;
+  }
+  .content .corporate-governance {
+    height: 1600px;
   }
 
-  .dropdown-toggle::after {
-    -webkit-transform: translateX(50%);
-    -moz-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    -o-transform: translateX(50%);
-    transform: translateX(50%);
-    top: auto;
-    bottom: 10px;
-    right: 50%;
+  .accesibility-box {
+    background-color: #ececec;
+  }
+}
+@media (max-width: 992px) {
+  .h-product-card {
+    box-shadow: 0 4px 8px 0 #00000033;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: auto;
+    max-width: 300px;
+    margin-bottom: 25px;
+  }
+  .h-product-card h3 {
+    text-align: center;
+    color: #255e59;
+  }
+  .h-product-card button {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    background-color: #255e59;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    height: 50px;
+    outline: 0;
+    padding: 0 12px;
+    text-align: center;
+    width: 100%;
+  }
+  .h-product-card button:hover {
+    opacity: 0.85;
+  }
+  .h-product-card ul {
+    list-style-type: square;
+    font-size: 0.9em;
+  }
+  .h-product-card .img-container {
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    align-content: center;
+  }
+  .h-product-card .img-container img {
+    width: 100%;
+  }
+  .h-product-card .price {
+    color: #122d2b;
+    font-size: 35px;
+    text-align: center;
+  }
+  .h-product-card .product-description {
+    min-height: 451.75px;
+    height: auto;
+  }
+  .h-product-card .description {
+    padding: 0 20px;
+  }
+  .h-product-card .properties {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 576px) {
+  .corporate-governance {
+    height: 1550px;
+  }
+}
+@media (min-width: 768px) {
+  .corporate-governance {
+    height: 1400px;
+  }
+}
+@media (min-width: 992px) {
+  .corporate-governance {
+    height: 1075px;
+  }
+}
+@media (min-width: 1200px) {
+  .corporate-governance {
+    height: 1050px;
   }
 }
 html {
@@ -783,6 +1012,11 @@ body {
 
 article {
   height: 100vh;
+}
+
+h1 {
+  color: #173936;
+  margin-top: 35px;
 }
 
 p {
@@ -812,6 +1046,14 @@ a:hover, a:focus {
 
 button {
   cursor: pointer;
+}
+
+.btn {
+  background-color: #42a79e;
+  border: none;
+}
+.btn:hover {
+  background-color: #173936;
 }
 
 /*# sourceMappingURL=styles.css.map */

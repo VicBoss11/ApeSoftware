@@ -14,9 +14,13 @@
 
 	&.active-sidebar {
 		width: calc(100% - 250px);
-		
+
 		.bg-section-img {
 			background-position: 250px 0;
+		}
+
+		.container {
+			width: 90%;
 		}
 	}
 
@@ -27,5 +31,46 @@
 		& > main {
 			padding-bottom: 360px;
 		}
+
+		.container {
+			min-height: 60vh;
+			margin: 75px auto;
+
+			p:first-child {
+				margin: -25px auto 25px auto;
+			}
+
+			& > p {
+				text-align: justify;
+				margin: 25px auto;
+			}
+
+			ul {
+				list-style-type: square;
+			}
+		}
+	}
+}
+
+.corporate-culture,
+.business-model {
+	ul,
+	ol {
+		font-family: variables.$main-font-family;
+		font-size: variables.$normal-font-size;
+		line-height: 1.5em;
+		text-align: justify;
+
+		li > span {
+			color: variables.$tertiary-alt-color;
+		}
+	}
+}
+
+.other-img {
+	width: 150px;
+
+	img {
+		width: 80%;
 	}
 }

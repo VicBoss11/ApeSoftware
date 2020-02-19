@@ -17,172 +17,122 @@
 	margin-bottom: -10px;
 }
 
-.bg-section-img {
-	div {
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-		justify-content: flex-end;
-		margin-left: 50px;
+.bg-section-img div {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: flex-end;
+	margin-left: 50px;
 
-		.section-name {
-			margin-bottom: 25px;
-		}
+	.section-name {
+		margin-bottom: 25px;
 	}
 }
 
 .product-section {
-	@include mixins.background-img(cover, 100px 0, fixed, 40vh, 0.5, "section/product");
+	@include mixins.background-img(cover, 100px 0, fixed, 250px, 0.5, "section/product");
 }
 
 .service-section {
-	@include mixins.background-img(cover, 100px 0, fixed, 40vh, 0.5, "section/service");
+	@include mixins.background-img(cover, 100px 0, fixed, 250px, 0.5, "section/service");
 }
 
 .business-model-section {
-	@include mixins.background-img(cover, 100px 0, fixed, 40vh, 0.15, "section/business-model");
+	@include mixins.background-img(cover, 100px 0, fixed, 250px, 0.15, "section/business-model");
 }
 
 .corporate-culture-section {
-	@include mixins.background-img(cover, 100px 0, fixed, 40vh, 0.5, "section/corporate-culture");
+	@include mixins.background-img(cover, 100px 0, fixed, 250px, 0.5, "section/corporate-culture");
 }
 
 .corporate-governance-section {
-	@include mixins.background-img(cover, 100px 0, fixed, 40vh, 0.5, "section/corporate-governance");
+	@include mixins.background-img(cover, 100px 0, fixed, 250px, 0.5, "section/corporate-governance");
 }
 
 .interest-data-section {
-	@include mixins.background-img(cover, 100px 0, fixed, 40vh, 0.5, "section/interest-data");
+	@include mixins.background-img(cover, 100px 0, fixed, 250px, 0.5, "section/interest-data");
 }
 
 .contact-section {
-	@include mixins.background-img(cover, 100px 0, fixed, 40vh, 0.5, "section/contact");
+	@include mixins.background-img(cover, 100px 0, fixed, 250px, 0.5, "section/contact");
 }
 
-.container {
-	min-height: 60vh;
-	margin: 75px auto;
-
-	.row {
-		margin: 30px 0;
-	}
+.president-box {
+	margin: 50px 0;
 }
 
-.product-card {
-	box-shadow: 0 4px 8px 0 #00000033;
+.president-info {
 	display: flex;
 	flex-direction: column;
-	height: auto;
-	margin: auto;
-	max-width: 300px;
+	justify-content: center;
+	align-items: center;
 
-	h3 {
+	img {
+		width: 175px;
+		height: 175px;
+	}
+
+	p {
+		color: variables.$main-font-color;
+		font-size: variables.$normal-font-size + 0.1em;
 		text-align: center;
-		color: variables.$tertiary-alt-color;
 	}
 
-	button {
-		@include mixins.transition(all 0.5s);
-		background-color: variables.$tertiary-alt-color;
-		border: none;
-		color: #ffffff;
-		font-size: 18px;
-		height: 50px;
-		outline: 0;
-		padding: 0 12px;
-		text-align: center;
-		width: 100%;
-
-		&:hover {
-			opacity: 0.85;
-		}
-	}
-
-	ul {
-		list-style-type: square;
-
-		font-size: variables.$normal-font-size - 0.15em;
-	}
-
-	.img-container {
-		width: 100%;
-		min-height: 300px;
-		display: flex;
-		align-content: center;
-		img {
-			width: 100%;
-		}
-	}
-
-	.price {
+	.title {
+		margin: 10px 0 5px 0;
 		color: variables.$alt-color;
-		font-size: 35px;
-		text-align: center;
-	}
-
-	.description-container {
-		min-height: 325px;
-		height: auto;
-	}
-
-	.description {
-		padding: 0 20px;
-	}
-
-	.properties {
-		padding: 0 20px;
+		font-size: variables.$big-font-size;
 	}
 }
 
-.h-product-card {
-	box-shadow: 0 4px 8px 0 #00000033;
+.president-speech {
+	border-left: 3px solid variables.$secondary-color;
+	display: flex;
+	justify-content: center;
+	height: 175px;
 
-	button {
-		@include mixins.transition(all 0.5s);
-		background-color: variables.$tertiary-alt-color;
-		border: none;
-		color: #ffffff;
-		font-size: 18px;
-		height: 50px;
-		outline: 0;
-		padding: 0 12px;
-		text-align: center;
-		width: 100%;
-
-		&:hover {
-			opacity: 0.85;
-		}
-	}
-
-	.img-container {
-		width: 100%;
+	.quote {
+		margin: 80px 50px;
 		display: flex;
-		align-content: center;
-		justify-content: center;
+		align-items: center;
+	}
+}
 
-		img {
-			width: 95%;
-		}
+.staff-box {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin: 20px auto;
+
+	img {
+		height: 125px;
+		width: 125px;
 	}
 
-		h3 {
-			color: variables.$tertiary-alt-color;
-			margin: 15px 0;
-			text-align: center;
-		}
-
-	.price {
-		color: variables.$alt-color;
-		font-size: 35px;
+	p {
+		color: variables.$main-font-color;
+		font-size: variables.$small-font-size + 0.25em;
+		padding: 0 2em;
 		text-align: center;
-	}
 
-	
-
-	.properties {
-		font-size: variables.$normal-font-size - 0.075em;
-		ul {
-			list-style-type: square;
+		&.title {
+			padding: 0;
+			margin: 10px;
+			color: variables.$alt-color;
+			font-size: variables.$normal-font-size;
 		}
 	}
+}
+
+.img-circle {
+	border-radius: 50%;
+}
+
+.bg-section-img.no-parallax {
+	background-attachment: scroll;
+	background-position: 0 0;
+}
+
+.p-big-text {
+	font-size: 3em;
 }

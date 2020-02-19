@@ -4,6 +4,8 @@
 @use 'content';
 @use 'header';
 @use 'main';
+@use 'products';
+@use 'services';
 @use 'footer';
 @use 'side-items';
 @use 'accessibility-box';
@@ -25,6 +27,11 @@ article {
 	height: 100vh;
 }
 
+h1 {
+	color: variables.$secondary-alt-color;
+	margin-top: 35px;
+}
+
 p {
 	font-family: variables.$main-font-family;
 	font-size: variables.$normal-font-size;
@@ -42,4 +49,13 @@ a {
 
 button {
 	cursor: pointer;
+}
+
+.btn {
+	background-color: variables.$secondary-color;
+	border: none;
+
+	&:hover {
+		background-color: variables.$secondary-alt-color;
+	}
 }
