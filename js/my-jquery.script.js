@@ -75,7 +75,7 @@ $(document).ready(function () {
             $('.corporate-governance').animate({
                 "height": "-=300px"
             });
-            
+
             $('.container').animate({
                 "font-size": "-=0.5em"
             });
@@ -91,6 +91,6 @@ $(document).ready(function () {
     });
 
     $('#my-videogames-list').click(function () {
-        window.location = "https://www.google.com";
+        window.location = "https://vicboss11.github.io/MyVideogamesList";
     });
 });
