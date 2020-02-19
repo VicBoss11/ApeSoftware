@@ -54,12 +54,43 @@ $(document).ready(function () {
         }
     });
 
+    $('#switch-1:checkbox').change(function () {
+        if ($(this).is(":checked")) {
+            $('.bg-section-img').addClass('no-parallax');
+        } else {
+            $('.bg-section-img').removeClass('no-parallax');
+        }
+    });
+
     $('#switch-2:checkbox').change(function () {
         if ($(this).is(":checked")) {
-            $('.corporate-culture p').addClass('p-big-text');
+            $('.corporate-governance').animate({
+                "height": "+=300px"
+            });
+
+            $('.container').animate({
+                "font-size": "+=0.5em"
+            });
         } else {
-            $('.corporate-culture p, .business-model p').removeClass('p-big-text');
+            $('.corporate-governance').animate({
+                "height": "-=300px"
+            });
+            
+            $('.container').animate({
+                "font-size": "-=0.5em"
+            });
         }
-    }),
-    
+    });
+
+    $('#switch-3:checkbox').change(function () {
+        if ($(this).is(":checked")) {
+            $('html').addClass('black-and-white');
+        } else {
+            $('html').removeClass('black-and-white');
+        }
+    });
+
+    $('#my-videogames-list').click(function () {
+        window.location = "https://www.google.com";
+    });
 });

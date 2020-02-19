@@ -1,0 +1,193 @@
+@use 'variables';
+@use 'mixins';
+
+.black-and-white {
+	& {
+		@include mixins.custom-scrollbar(8px, 8px, #a59f9f, variables.$secondary-color-d);
+	}
+
+	h1 {
+		color: variables.$secondary-alt-color-d;
+	}
+
+	footer {
+		background-color: variables.$main-font-color-d;
+
+		hr{
+			border: 0.5px solid variables.$alt-color-d;
+		}
+	}
+
+	.sidebar {
+		background-color: variables.$secondary-color-d;
+		color: variables.$main-color-d;
+
+		&.active-sidebar {
+			.sidebar-menu .active {
+				background-color: variables.$secondary-alt-color-d;
+				color: variables.$main-color-d;
+			}
+
+			.menu-item {
+				& > a {
+					&:hover {
+						background-color: variables.$main-color-d;
+						color: variables.$secondary-color-d;
+					}
+
+					&[aria-expanded="true"] {
+						background-color: variables.$alt-color-d;
+						color: variables.$secondary-color-d;
+
+						&:hover {
+							background-color: variables.$main-color-d;
+							color: variables.$secondary-color-d;
+						}
+					}
+				}
+
+				div {
+					background-color: variables.$alt-color-d;
+					color: variables.$secondary-color-d;
+
+					a:hover{
+						background-color: variables.$main-color-d;
+						color: variables.$secondary-color-d;
+					}
+				}
+			}
+		}
+	}
+
+	.sidebar-header {
+		background-color: variables.$main-color-d;
+	}
+
+	.sidebar-menu {
+		@include mixins.custom-scrollbar(3px, 3px, variables.$main-color-d, variables.$secondary-alt-color-d);
+
+		.active {
+			background-color: variables.$alt-color-d;
+			color: variables.$main-color-d;
+		}
+	}
+
+	.menu-item {
+		& > a {
+			&:hover {
+				background-color: variables.$main-color-d;
+				color: variables.$secondary-color-d;
+			}
+
+			&[aria-expanded="true"] {
+				background-color: variables.$alt-color-d;
+				color: variables.$secondary-color-d;
+
+				&:hover {
+					background-color: variables.$main-color-d;
+					color: variables.$secondary-color-d;
+				}
+			}
+		}
+
+		div {
+			background-color: variables.$alt-color-d;
+			color: variables.$secondary-color-d;
+
+			a:hover{
+				background-color: variables.$main-color-d;
+				color: variables.$secondary-color-d;
+			}
+		}
+	}
+
+	.sidebar-toggle-button {
+		button {
+			background-color: variables.$secondary-color-d;
+			border-color: variables.$main-color-d;
+			color: variables.$main-color-d;
+
+			&:hover {
+				background-color: variables.$alt-color-d;
+				color: variables.$tertiary-alt-color-d;
+			}
+		}
+	}
+
+	.corporate-culture,
+	.business-model {
+		li > span {
+			color: variables.$tertiary-alt-color-d;
+		}
+	}
+
+	.president-info {
+		p {
+			color: variables.$tertiary-alt-color-d;
+		}
+
+		.title {
+			color: variables.$main-font-color;
+		}
+	}
+
+	.president-speech {
+		border-color: variables.$secondary-color-d;
+	}
+
+	.staff-box {
+		p {
+			color: variables.$tertiary-alt-color-d;
+
+			&.title {
+				color: variables.$main-font-color-d;
+			}
+		}
+	}
+
+	.product-card {
+		h3 {
+			color: variables.$tertiary-alt-color-d;
+		}
+
+		button {
+			background-color: variables.$tertiary-alt-color-d;
+		}
+
+		.price {
+			color: variables.$main-font-color-d;
+		}
+	}
+
+	.h-product-card {
+		button {
+			background-color: variables.$tertiary-alt-color-d;
+		}
+
+		h3 {
+			color: variables.$tertiary-alt-color-d;
+		}
+	}
+
+	.service-card {
+		h3 {
+			color: variables.$tertiary-alt-color-d;
+		}
+
+		button {
+			background-color: variables.$tertiary-alt-color-d;
+		}
+	}
+
+	.accessibility {
+		background-color: variables.$main-font-color;
+	}
+
+	.btn {
+		background-color: variables.$secondary-color-d;
+
+		&:hover {
+			background-color: variables.$secondary-alt-color-d;
+		}
+	}
+}

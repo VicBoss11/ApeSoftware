@@ -4,17 +4,17 @@
 .service-card {
 	box-shadow: 0 4px 8px 0 #00000033;
 	display: flex;
-    flex-direction: column;
-    height: 400px;
-    justify-content: flex-end;
-    align-items: center;
+	flex-direction: column;
+	height: 400px;
+	justify-content: flex-end;
+	align-items: center;
 	margin: auto;
 	margin-bottom: 55px;
 	width: 400px;
 
 	h3 {
 		text-align: center;
-        color: variables.$tertiary-alt-color;
+		color: variables.$tertiary-alt-color;
 	}
 
 	button {
@@ -23,12 +23,12 @@
 		border: none;
 		color: #ffffff;
 		font-size: 18px;
-        height: 50px;
-        margin-top: 10px;
+		height: 50px;
+		margin-top: 10px;
 		outline: 0;
 		padding: 0 12px;
 		text-align: center;
-        width: 100%;
+		width: 100%;
 
 		&:hover {
 			opacity: 0.85;
@@ -36,13 +36,13 @@
 	}
 
 	.img-container {
-        height: 70%;
-        width: 70%;
-        display: flex;
+		height: 70%;
+		width: 70%;
+		display: flex;
+
 		img {
-            align-self: center;
+			align-self: center;
 			width: 100%;
 		}
 	}
-
 }

@@ -34,16 +34,6 @@
   position: absolute;
   width: 100%;
 }
-.sidebar.active-sidebar .sidebar-menu::-webkit-scrollbar {
-  width: 3px;
-  height: 3px;
-}
-.sidebar.active-sidebar .sidebar-menu::-webkit-scrollbar-track {
-  background: #51bab1;
-}
-.sidebar.active-sidebar .sidebar-menu::-webkit-scrollbar-thumb {
-  background: #173936;
-}
 .sidebar.active-sidebar .sidebar-menu .active {
   background-color: #122d2b;
   color: #51bab1;
@@ -482,10 +472,6 @@
   background-position: 0 0;
 }
 
-.p-big-text {
-  font-size: 3em;
-}
-
 .product-card {
   box-shadow: 0 4px 8px 0 #00000033;
   display: flex;
@@ -537,6 +523,7 @@
   text-align: center;
 }
 .product-card .description-container {
+  margin-top: 15px;
   min-height: 325px;
   height: auto;
 }
@@ -585,11 +572,6 @@
 .h-product-card h3 {
   color: #255e59;
   margin: 15px 0 35px 0;
-  text-align: center;
-}
-.h-product-card .price {
-  color: #122d2b;
-  font-size: 35px;
   text-align: center;
 }
 .h-product-card .description,
@@ -650,38 +632,64 @@
 
 footer {
   background-color: #173936;
-  position: absolute;
   height: 300px;
   width: 100%;
   bottom: 0;
   border-bottom: 1px solid;
 }
+footer hr {
+  border: 0.5px solid #42a79e;
+  width: 95%;
+  margin: 0 auto 15px auto;
+}
+footer small {
+  text-align: center;
+  display: block;
+  color: #b9b9b9df;
+  font-size: 0.75em;
+}
+footer .footer-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+footer .footer-info span {
+  font-size: 2em;
+}
 
-.fa-facebook-square,
-.fa-twitter,
-.fa-linkedin,
-.fa-github {
+.glyphicon-footer {
   -webkit-transition: color 0.25s;
   -moz-transition: color 0.25s;
   -ms-transition: color 0.25s;
   -o-transition: color 0.25s;
   transition: color 0.25s;
+  font-size: 25px;
+}
+
+.fa-github:hover {
+  color: #6cc644;
 }
 
 .fa-facebook-square:hover {
   color: #3b5998;
 }
 
-.fa-twitter:hover {
-  color: #55acee;
+.fa-instagram:hover {
+  color: #c32aa3;
 }
 
 .fa-linkedin:hover {
-  color: #e95950;
+  color: #007bb5;
 }
 
-.fa-github:hover {
-  color: #cb2027;
+.fa-twitter:hover {
+  color: #1da1f2;
+}
+
+.fa-youtube:hover {
+  color: #ff0000;
 }
 
 .side-items a {
@@ -784,6 +792,149 @@ footer {
   margin: 15px;
 }
 
+.black-and-white::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.black-and-white::-webkit-scrollbar-track {
+  background: #a59f9f;
+}
+.black-and-white::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+}
+.black-and-white h1 {
+  color: #404040;
+}
+.black-and-white footer {
+  background-color: #000000;
+}
+.black-and-white footer hr {
+  border: 0.5px solid #999999;
+}
+.black-and-white .sidebar {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+.black-and-white .sidebar.active-sidebar .sidebar-menu .active {
+  background-color: #404040;
+  color: #ffffff;
+}
+.black-and-white .sidebar.active-sidebar .menu-item > a:hover {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+.black-and-white .sidebar.active-sidebar .menu-item > a[aria-expanded=true] {
+  background-color: #999999;
+  color: #1a1a1a;
+}
+.black-and-white .sidebar.active-sidebar .menu-item > a[aria-expanded=true]:hover {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+.black-and-white .sidebar.active-sidebar .menu-item div {
+  background-color: #999999;
+  color: #1a1a1a;
+}
+.black-and-white .sidebar.active-sidebar .menu-item div a:hover {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+.black-and-white .sidebar-header {
+  background-color: #ffffff;
+}
+.black-and-white .sidebar-menu::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+.black-and-white .sidebar-menu::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+.black-and-white .sidebar-menu::-webkit-scrollbar-thumb {
+  background: #404040;
+}
+.black-and-white .sidebar-menu .active {
+  background-color: #999999;
+  color: #ffffff;
+}
+.black-and-white .menu-item > a:hover {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+.black-and-white .menu-item > a[aria-expanded=true] {
+  background-color: #999999;
+  color: #1a1a1a;
+}
+.black-and-white .menu-item > a[aria-expanded=true]:hover {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+.black-and-white .menu-item div {
+  background-color: #999999;
+  color: #1a1a1a;
+}
+.black-and-white .menu-item div a:hover {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+.black-and-white .sidebar-toggle-button button {
+  background-color: #1a1a1a;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.black-and-white .sidebar-toggle-button button:hover {
+  background-color: #999999;
+  color: #333333;
+}
+.black-and-white .corporate-culture li > span,
+.black-and-white .business-model li > span {
+  color: #333333;
+}
+.black-and-white .president-info p {
+  color: #333333;
+}
+.black-and-white .president-info .title {
+  color: #1a1a1a;
+}
+.black-and-white .president-speech {
+  border-color: #1a1a1a;
+}
+.black-and-white .staff-box p {
+  color: #333333;
+}
+.black-and-white .staff-box p.title {
+  color: #000000;
+}
+.black-and-white .product-card h3 {
+  color: #333333;
+}
+.black-and-white .product-card button {
+  background-color: #333333;
+}
+.black-and-white .product-card .price {
+  color: #000000;
+}
+.black-and-white .h-product-card button {
+  background-color: #333333;
+}
+.black-and-white .h-product-card h3 {
+  color: #333333;
+}
+.black-and-white .service-card h3 {
+  color: #333333;
+}
+.black-and-white .service-card button {
+  background-color: #333333;
+}
+.black-and-white .accessibility {
+  background-color: #1a1a1a;
+}
+.black-and-white .btn {
+  background-color: #1a1a1a;
+}
+.black-and-white .btn:hover {
+  background-color: #404040;
+}
+
 @media (max-width: 768px) {
   .sidebar {
     max-width: 250px;
@@ -810,16 +961,6 @@ footer {
     padding-top: 15px;
     position: absolute;
     width: 100%;
-  }
-  .sidebar .sidebar-menu::-webkit-scrollbar {
-    width: 3px;
-    height: 3px;
-  }
-  .sidebar .sidebar-menu::-webkit-scrollbar-track {
-    background: #51bab1;
-  }
-  .sidebar .sidebar-menu::-webkit-scrollbar-thumb {
-    background: #173936;
   }
   .sidebar .sidebar-menu .active {
     background-color: #122d2b;
@@ -909,57 +1050,22 @@ footer {
 }
 @media (max-width: 992px) {
   .h-product-card {
-    box-shadow: 0 4px 8px 0 #00000033;
-    display: flex;
-    flex-direction: column;
     height: auto;
     margin: auto;
     max-width: 300px;
     margin-bottom: 25px;
   }
-  .h-product-card h3 {
-    text-align: center;
-    color: #255e59;
-  }
-  .h-product-card button {
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    background-color: #255e59;
-    border: none;
-    color: #ffffff;
-    font-size: 18px;
-    height: 50px;
-    outline: 0;
-    padding: 0 12px;
-    text-align: center;
-    width: 100%;
-  }
-  .h-product-card button:hover {
-    opacity: 0.85;
-  }
   .h-product-card ul {
-    list-style-type: square;
     font-size: 0.9em;
   }
   .h-product-card .img-container {
-    width: 100%;
     min-height: 300px;
-    display: flex;
-    align-content: center;
   }
   .h-product-card .img-container img {
     width: 100%;
   }
-  .h-product-card .price {
-    color: #122d2b;
-    font-size: 35px;
-    text-align: center;
-  }
   .h-product-card .product-description {
-    min-height: 451.75px;
+    min-height: 466.75px;
     height: auto;
   }
   .h-product-card .description {
@@ -1054,6 +1160,20 @@ button {
 }
 .btn:hover {
   background-color: #173936;
+}
+
+.modal {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+.modal .modal-body > div {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.modal .modal-body > div div {
+  margin: 7.5px auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

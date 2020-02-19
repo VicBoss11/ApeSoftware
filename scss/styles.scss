@@ -9,6 +9,7 @@
 @use 'footer';
 @use 'side-items';
 @use 'accessibility-box';
+@use 'themes';
 @use 'media-queries';
 
 html {
@@ -57,5 +58,23 @@ button {
 
 	&:hover {
 		background-color: variables.$secondary-alt-color;
+	}
+}
+
+.modal {
+	font-family: variables.$main-font-family;
+	font-size: variables.$normal-font-size + 0.05em;
+	line-height: 1.5em;
+
+	.modal-body {
+		& > div {
+			width: 90%;
+			margin: 0 auto;
+			padding: 0 15px;
+
+			div {
+				margin: 7.5px auto;
+			}
+		}
 	}
 }

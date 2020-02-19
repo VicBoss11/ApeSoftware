@@ -91,7 +91,6 @@
 	}
 
 	.sidebar-menu {
-		@include custom-scrollbar(3px, 3px, variables.$main-color, variables.$secondary-alt-color);
 		bottom: 0;
 		height: calc(100% - 175px);
 		overflow: auto;

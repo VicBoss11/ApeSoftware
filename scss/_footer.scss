@@ -3,32 +3,61 @@
 
 footer {
 	background-color: variables.$secondary-alt-color;
-	position: absolute;
 	height: 300px;
 	width: 100%;
 	bottom: 0;
 	border-bottom: 1px solid;
+
+	hr {
+		border: 0.5px solid variables.$secondary-color;
+		width: 95%;
+		margin: 0 auto 15px auto;
+	}
+
+	small {
+		text-align: center;
+		display: block;
+		color: #b9b9b9df;
+		font-size: variables.$small-font-size + 0.15em;
+	}
+
+	.footer-info {
+		span {
+			font-size: 2em;
+		}
+
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+	}
 }
 
-.fa-facebook-square,
-.fa-twitter,
-.fa-linkedin,
-.fa-github {
+.glyphicon-footer {
 	@include mixins.transition(color 0.25s);
-}
-
-.fa-facebook-square:hover {
-	color: #3b5998;
-}
-
-.fa-twitter:hover {
-	color: #55acee;
-}
-
-.fa-linkedin:hover {
-	color: #e95950;
+	font-size: 25px;
 }
 
 .fa-github:hover {
-	color: #cb2027;
+	color: variables.$github-color;
+}
+
+.fa-facebook-square:hover {
+	color: variables.$facebook-color;
+}
+.fa-instagram:hover {
+	color: variables.$instagram-color;
+}
+
+.fa-linkedin:hover {
+	color: variables.$linkedin-color;
+}
+
+.fa-twitter:hover {
+	color: variables.$twitter-color;
+}
+
+.fa-youtube:hover {
+	color: variables.$youtube-color;
 }

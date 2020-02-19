@@ -46,6 +46,7 @@
 	i {
 		@include mixins.transition(transform 0.8s ease-in-out);
 	}
+	
 	&:hover {
 		i {
 			@include mixins.transform(rotate(360deg));
